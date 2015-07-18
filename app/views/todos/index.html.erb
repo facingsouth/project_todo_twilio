@@ -8,7 +8,7 @@
           <%= todo.updated_at %>
           <%= link_to 'Edit', edit_todo_path(todo.id) %>
           <%= link_to 'Delete', todo_path(todo.id), method: :delete %>
-          <%= link_to 'Send Text', send_text_path %>
+          <%= link_to 'Send Text', send_text_path, locals => {todo: todo.item}%>
         </li>
       <% end %>
     </ul>
