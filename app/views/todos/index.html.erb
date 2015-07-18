@@ -1,0 +1,10 @@
+  <div class="page-header">
+    <h1>Your current TODO list: </h1>
+  </div>
+    <ul class="list-group">
+      <% @todos.each do |todo| %>
+        <li class="list-group-item"> <%= todo.item  %></li>
+      <% end %>
+    </ul>
+
+<%= link_to 'new todo' , new_todo_path , class: 'btn btn-primary' %>
