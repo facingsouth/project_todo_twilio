@@ -3,7 +3,12 @@
   </div>
     <ul class="list-group">
       <% @todos.each do |todo| %>
-        <li class="list-group-item"> <%= todo.item  %></li>
+        <li class="list-group-item"> 
+          <%= todo.item  %>
+          <%= todo.updated_at %>
+          <%= link_to 'Edit', edit_todo_path(todo.id) %>
+          <%= link_to 'Delete', todo_path(todo.id), method: :delete %>
+        </li>
       <% end %>
     </ul>
 
