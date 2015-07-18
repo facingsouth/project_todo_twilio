@@ -8,8 +8,13 @@
           <%= todo.updated_at %>
           <%= link_to 'Edit', edit_todo_path(todo.id) %>
           <%= link_to 'Delete', todo_path(todo.id), method: :delete %>
+          <%= link_to 'Send Text', send_text_path %>
         </li>
       <% end %>
     </ul>
 
+
+
 <%= link_to 'new todo' , new_todo_path , class: 'btn btn-primary' %>
+
+<%= flash[:success] %>

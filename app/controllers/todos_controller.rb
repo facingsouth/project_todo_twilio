@@ -14,7 +14,7 @@ class TodosController < ApplicationController
       flash[:success] = 'You have another item todo.'
       redirect_to todos_path 
     else
-      flash[:error] = 'An error has occurred'
+      flash.now[:error] = 'An error has occurred'
       render :new
     end
   end
